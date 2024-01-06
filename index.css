@@ -1,0 +1,44 @@
+* {
+  /* remover as configurações padrão de espaçamento  */
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+
+  /* grid-template-columns: repeat(3, 1fr);  */
+
+  gap: 8px;
+
+  /* align trabalho no eixo y ou vertical */
+  /* align-content: space-between;  */
+  /* justify trabalha com o eixo x ou horizontal  */
+  /* justify-content: space-evenly;  */
+  /* place representa a junção do align e justify  */
+  /* place-content: center;  */
+  /* align-items: center;  */
+  /* justify-items: end;  */
+  /* place-items: start;  */
+
+  /* altura de viewport height  */
+  height: 100vh;
+  /* largura de viewport width  */
+  width: 100vw;
+  background-color: black;
+
+}
+
+.grid > div {
+  background-color: cornflowerblue;
+}
+
+.grid div:nth-child(2) {
+  /* self trabalha com align e justify para ele mesmo */
+  /* align-self: end;
+  justify-self: center; */
+  place-self: center;
+}
